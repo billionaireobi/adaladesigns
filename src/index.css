@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-gold: #C9A962;
+  --color-gold-light: #E4D4A8;
+  --color-gold-dark: #9A7B3F;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-light: #2D2D2D;
+  --color-cream: #FAF8F5;
+  --color-ivory: #FFFFF0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-900 bg-white antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-medium py-3 px-8 rounded-none transition-all duration-300 uppercase tracking-widest text-sm;
+    letter-spacing: 0.2em;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-medium py-3 px-8 rounded-none transition-all duration-300 uppercase tracking-widest text-sm;
+    letter-spacing: 0.2em;
+  }
+
+  .btn-outline-gold {
+    @apply bg-transparent border-2 text-white hover:bg-white/10 font-medium py-3 px-8 rounded-none transition-all duration-300 uppercase tracking-widest text-sm;
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    letter-spacing: 0.2em;
+  }
+
+  .card {
+    @apply bg-white overflow-hidden transition-all duration-500;
+  }
+
+  .card:hover {
+    @apply shadow-2xl;
+    transform: translateY(-8px);
+  }
+
+  .input-field {
+    @apply w-full px-4 py-4 border border-gray-300 rounded-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-300 bg-white;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-wide;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .section-subtitle {
+    @apply text-sm uppercase tracking-widest text-amber-600 font-medium mb-4;
+    letter-spacing: 0.3em;
+  }
+
+  .gold-text {
+    color: var(--color-gold);
+  }
+
+  .gold-bg {
+    background-color: var(--color-gold);
+  }
+
+  .charcoal-bg {
+    background-color: var(--color-charcoal);
+  }
+
+  .cream-bg {
+    background-color: var(--color-cream);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+
+/* Gradient overlays */
+.gradient-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+}
+
+/* Image hover effects */
+.image-zoom {
+  @apply overflow-hidden;
+}
+
+.image-zoom img {
+  @apply transition-transform duration-700 ease-out;
+}
+
+.image-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Line decorations */
+.line-decoration::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--color-gold);
+  margin-top: 1.5rem;
+}
+
+.line-decoration-center::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--color-gold);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
