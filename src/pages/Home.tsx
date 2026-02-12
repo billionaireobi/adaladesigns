@@ -1,7 +1,30 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowRight, FiInstagram, FiMapPin } from 'react-icons/fi';
+import ImageLightbox from '../components/ImageLightbox';
+import ImageCarousel from '../components/ImageCarousel';
 
 const Home = () => {
+  const [lightboxImage, setLightboxImage] = useState<{ url: string; alt: string } | null>(null);
+
+  const expertiseImages = [
+    { url: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop', alt: 'Tailored Suit' },
+    { url: '/suit.jpeg', alt: 'Suit Detail' },
+    { url: '/suit2.jpeg', alt: 'Suit Detail' },
+    { url: '/suit3.jpeg', alt: 'Suit Detail' },
+    { url: '/client.jpeg', alt: 'Client Showcase' },
+    { url: '/client2.jpeg', alt: 'Client Showcase' },
+    { url: '/client3.jpeg', alt: 'Client Showcase' },
+    { url: '/profile.jpeg', alt: 'Profile' },
+  ];
+
+  const openLightbox = (url: string, alt: string) => {
+    setLightboxImage({ url, alt });
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+  };
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
@@ -80,40 +103,16 @@ const Home = () => {
                 <FiArrowRight className="ml-3" />
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="image-zoom aspect-[3/4] bg-gray-200">
-                  <img 
-                    src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop" 
-                    alt="Tailored Suit"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="image-zoom aspect-square bg-gray-200">
-                  <img 
-                    src="/suit.jpeg" 
-                    alt="Fabric Detail"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4 pt-12">
-                <div className="image-zoom aspect-square bg-gray-200">
-                  <img 
-                    src="/client2.jpeg" 
-                    alt="Fabric Detail"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="image-zoom aspect-[3/4] bg-gray-200">
-                  <img 
-                    src="/suit2.jpeg" 
-                    alt="Suit Detail"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+            <ImageCarousel 
+              images={expertiseImages}
+              onImageClick={openLightbox}
+            />
+            <ImageLightbox
+              imageUrl={lightboxImage?.url || ''}
+              alt={lightboxImage?.alt || ''}
+              isOpen={!!lightboxImage}
+              onClose={closeLightbox}
+            />
           </div>
         </div>
       </section>
@@ -263,7 +262,7 @@ const Home = () => {
                 </div>
                 <div className="pt-4">
                   <a
-                    href="https://maps.app.goo.gl/gLQgACxQvhs4G62s9"
+                    href="https://www.google.com/maps/search/?api=1&query=Makina+market+nairobi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary inline-flex items-center"
@@ -276,14 +275,14 @@ const Home = () => {
             </div>
             <div className="aspect-video bg-gray-200 overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8176510825786!2d36.82082!3d-1.28333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTYnNTkuOSJTIDM2wrA0OScxNS4wIkU!5e0!3m2!1sen!2ske!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8176510825786!2d36.82082!3d-1.28333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0814b37a4c4!2sMakina%20Market%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '400px' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Location Map"
+                title="Location Map - Makina Market Nairobi"
               ></iframe>
             </div>
           </div>
