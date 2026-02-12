@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { FiSave, FiArrowLeft, FiUpload, FiX } from 'react-icons/fi';
 import { apiService } from '../../services/api';
+import { env } from '../../config/env';
 
 const AdminDesignForm = () => {
   const { id } = useParams<{ id: string }>();
@@ -42,7 +43,7 @@ const AdminDesignForm = () => {
         currency: design.currency,
       });
       if (design.image_url) {
-        setImagePreview(`http://localhost:5000${design.image_url}`);
+        setImagePreview(`${env.apiBaseUrl}${design.image_url}`);
       }
     } catch (err) {
       setError('Failed to load design');

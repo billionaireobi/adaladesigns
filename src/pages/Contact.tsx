@@ -8,7 +8,7 @@ const Contact = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80')`,
+            backgroundImage: `url('/suit.jpeg')`,
           }}
         ></div>
         <div className="relative z-10 text-center text-white px-6">
@@ -39,8 +39,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-serif text-xl text-gray-900 mb-2">Location</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      SUPERIOR CENTER, 6TH FLOOR, SHOP M6<br />
-                      Junction of Kenyatta Avenue & Kimathi Street<br />
+                      Makina market nairobi<br />
                       Nairobi, Kenya
                     </p>
                     <a
@@ -61,10 +60,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-serif text-xl text-gray-900 mb-2">Phone</h3>
                     <a
-                      href="tel:+254726539925"
+                      href="tel:+254714422459"
                       className="text-gray-600 hover:text-amber-600 transition-colors text-lg"
                     >
-                      +254 726 539 925
+                      0714422459
                     </a>
                   </div>
                 </div>
@@ -117,7 +116,7 @@ const Contact = () => {
                   Get instant responses and browse our latest designs directly on WhatsApp.
                 </p>
                 <a
-                  href="https://wa.me/254726539925?text=Hi! I'm interested in your tailoring services."
+                  href="https://wa.me/254714422459?text=Hi! I'm interested in your tailoring services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-medium py-4 px-6 transition-colors duration-300 uppercase tracking-widest text-sm"
@@ -134,14 +133,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-serif text-xl text-gray-900">Instagram</h3>
-                    <p className="text-purple-600 text-sm">@adaborafashion</p>
+                    <p className="text-purple-600 text-sm">@adaladesigns</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">
                   Follow us for the latest designs, behind-the-scenes, and style inspiration.
                 </p>
                 <a
-                  href="https://www.instagram.com/adaborafashion"
+                  href="https://www.instagram.com/adaladesigns?igsh=MmZ2NGtxamgyb3Fs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-4 px-6 transition-colors duration-300 uppercase tracking-widest text-sm"

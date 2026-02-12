@@ -9,7 +9,7 @@ const About = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80')`,
+            backgroundImage: `url('/profile.jpeg')`,
           }}
         ></div>
         <div className="relative z-10 text-center text-white px-6">
@@ -51,7 +51,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[4/5] bg-gray-200">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop"
+                  src="/client.jpeg"
                   alt="Master Tailor at Work"
                   className="w-full h-full object-cover"
                 />

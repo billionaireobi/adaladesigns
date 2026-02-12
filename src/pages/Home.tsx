@@ -8,9 +8,13 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80')`,
+            backgroundImage: `url('/profile.jpeg')`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center center',
+            backgroundAttachment: 'fixed',
+            backgroundColor: '#1A1A1A',
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
@@ -34,7 +38,7 @@ const Home = () => {
               <FiArrowRight className="ml-3" />
             </Link>
             <a
-              href="https://wa.me/254726539925"
+              href="https://wa.me/254714422459"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-gold inline-flex items-center justify-center"
@@ -87,7 +91,7 @@ const Home = () => {
                 </div>
                 <div className="image-zoom aspect-square bg-gray-200">
                   <img 
-                    src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&h=400&fit=crop" 
+                    src="/suit.jpeg" 
                     alt="Fabric Detail"
                     className="w-full h-full object-cover"
                   />
@@ -96,14 +100,14 @@ const Home = () => {
               <div className="space-y-4 pt-12">
                 <div className="image-zoom aspect-square bg-gray-200">
                   <img 
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop" 
-                    alt="Craftsmanship"
+                    src="/client2.jpeg" 
+                    alt="Fabric Detail"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="image-zoom aspect-[3/4] bg-gray-200">
                   <img 
-                    src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=400&h=600&fit=crop" 
+                    src="/suit2.jpeg" 
                     alt="Suit Detail"
                     className="w-full h-full object-cover"
                   />
@@ -133,13 +137,13 @@ const Home = () => {
               {
                 title: 'Traditional Wear',
                 description: 'Elegant African traditional garments that blend cultural heritage with modern sophistication.',
-                image: 'https://images.unsplash.com/photo-1594633313593-bab3825d0caf?w=600&h=400&fit=crop',
+                image: '/suit3.jpeg',
                 category: 'traditional'
               },
               {
                 title: 'Custom Designs',
                 description: 'Unique pieces designed specifically for your vision, from formal occasions to everyday elegance.',
-                image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&h=400&fit=crop',
+                image: '/client.jpeg',
                 category: 'custom'
               }
             ].map((service, index) => (
@@ -195,9 +199,12 @@ const Home = () => {
       {/* CTA Section */}
       <section className="relative py-32">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          className="absolute inset-0 bg-no-repeat bg-fixed"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80')`,
+            backgroundImage: `url('/client2.jpeg')`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center center',
+            backgroundColor: '#1A1A1A',
           }}
         >
           <div className="absolute inset-0 bg-black/70"></div>
@@ -214,7 +221,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="https://wa.me/254726539925?text=Hi! I'd like to book a consultation for bespoke tailoring."
+              href="https://wa.me/254714422459?text=Hi! I'd like to book a consultation for bespoke tailoring."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -222,7 +229,7 @@ const Home = () => {
               Book Consultation
             </a>
             <a
-              href="https://www.instagram.com/adaborafashion"
+              href="https://www.instagram.com/adaladesigns?igsh=MmZ2NGtxamgyb3Fs"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-gold inline-flex items-center justify-center"
@@ -249,8 +256,7 @@ const Home = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
                     <p className="text-gray-600">
-                      SUPERIOR CENTER, 6TH FLOOR, SHOP M6<br />
-                      Junction of Kenyatta Avenue & Kimathi Street<br />
+                      Makina market nairobi<br />
                       Nairobi, Kenya
                     </p>
                   </div>

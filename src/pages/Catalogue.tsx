@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { FiGrid, FiList, FiFilter } from 'react-icons/fi';
 import { apiService } from '../services/api';
 import type { Design } from '../types';
+import { env } from '../config/env';
 
 const Catalogue = () => {
   const [designs, setDesigns] = useState<Design[]>([]);
@@ -75,7 +76,7 @@ const Catalogue = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80')`,
+            backgroundImage: `url('/client3.jpeg')`,
           }}
         ></div>
         <div className="relative z-10 text-center text-white px-6">
@@ -192,7 +193,7 @@ const Catalogue = () => {
                   } bg-gray-200`}>
                     {design.image_url ? (
                       <img
-                        src={`http://localhost:5000${design.image_url}`}
+                        src={`${env.apiBaseUrl}${design.image_url}`}
                         alt={design.title}
                         className="w-full h-full object-cover"
                       />

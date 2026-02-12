@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FiPlus, FiEdit, FiTrash2, FiLogOut, FiGrid, FiHome } from 'react-icons/fi';
 import { apiService } from '../../services/api';
 import type { Design } from '../../types';
+import { env } from '../../config/env';
 
 const AdminDashboard = () => {
   const [designs, setDesigns] = useState<Design[]>([]);
@@ -144,7 +145,7 @@ const AdminDashboard = () => {
                 <div className="aspect-[3/4] bg-gray-200 overflow-hidden relative">
                   {design.image_url ? (
                     <img
-                      src={`http://localhost:5000${design.image_url}`}
+                      src={`${env.apiBaseUrl}${design.image_url}`}
                       alt={design.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

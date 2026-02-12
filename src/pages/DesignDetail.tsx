@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FiArrowLeft, FiPhone, FiInstagram } from 'react-icons/fi';
 import { apiService } from '../services/api';
 import type { Design } from '../types';
+import { env } from '../config/env';
 
 const DesignDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -81,7 +82,7 @@ const DesignDetail = () => {
             <div className="aspect-[3/4] bg-gray-200 overflow-hidden">
               {design.image_url ? (
                 <img
-                  src={`http://localhost:5000${design.image_url}`}
+                  src={`${env.apiBaseUrl}${design.image_url}`}
                   alt={design.title}
                   className="w-full h-full object-cover"
                 />
@@ -117,7 +118,7 @@ const DesignDetail = () => {
             {/* CTA Buttons */}
             <div className="space-y-4 mb-12">
               <a
-                href={`https://wa.me/254726539925?text=Hi! I'm interested in the "${design.title}" design. Can we discuss pricing and customization options?`}
+                href={`https://wa.me/254714422459?text=Hi! I'm interested in the "${design.title}" design. Can we discuss pricing and customization options?`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-medium py-4 px-6 transition-colors duration-300 uppercase tracking-widest text-sm"
@@ -127,7 +128,7 @@ const DesignDetail = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/adaborafashion"
+                href="https://www.instagram.com/adaladesigns?igsh=MmZ2NGtxamgyb3Fs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-4 px-6 transition-colors duration-300 uppercase tracking-widest text-sm"

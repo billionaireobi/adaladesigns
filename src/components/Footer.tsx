@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.instagram.com/adaborafashion"
+                href="https://www.instagram.com/adaladesigns?igsh=MmZ2NGtxamgyb3Fs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center border border-gray-700 text-gray-400 hover:border-amber-500 hover:text-amber-500 transition-all duration-300"
@@ -31,7 +31,7 @@ const Footer = () => {
                 <FiInstagram size={18} />
               </a>
               <a
-                href="https://wa.me/254726539925"
+                href="https://wa.me/254714422459"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center border border-gray-700 text-gray-400 hover:border-amber-500 hover:text-amber-500 transition-all duration-300"
@@ -76,19 +76,17 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <FiMapPin className="text-amber-500 mt-1 flex-shrink-0" size={16} />
                 <div className="text-gray-400 text-sm leading-relaxed">
-                  SUPERIOR CENTER<br />
-                  6TH FLOOR, SHOP M6<br />
-                  Kenyatta Ave & Kimathi St<br />
+                  Makina market nairobi<br />
                   Nairobi, Kenya
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <FiPhone className="text-amber-500 flex-shrink-0" size={16} />
                 <a
-                  href="tel:+254726539925"
+                  href="tel:+254714422459"
                   className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
                 >
-                  +254 726 539 925
+                  0714422459
                 </a>
               </div>
               <div className="flex items-center space-x-3">
